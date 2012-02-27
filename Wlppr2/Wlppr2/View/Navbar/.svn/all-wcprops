@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/wlpprmac/!svn/ver/76/Wlppr2/Wlppr2/View/Navbar
+END
+WPPNavbarView.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/wlpprmac/!svn/ver/41/Wlppr2/Wlppr2/View/Navbar/WPPNavbarView.h
+END
+WPPSearchBackground.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPSearchBackground.h
+END
+WPPNavbarView.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/wlpprmac/!svn/ver/76/Wlppr2/Wlppr2/View/Navbar/WPPNavbarView.m
+END
+WPPSearchBackground.m
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPSearchBackground.m
+END
+WPPSliderCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPSliderCell.h
+END
+WPPZoomMinButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPZoomMinButton.h
+END
+WPPZoomMaxButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPZoomMaxButton.h
+END
+WPPSliderCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPSliderCell.m
+END
+WPPTextField.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPTextField.h
+END
+WPPZoomMinButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPZoomMinButton.m
+END
+WPPRefreshButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPRefreshButton.h
+END
+WPPZoomMaxButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPZoomMaxButton.m
+END
+WPPSettingsButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPSettingsButton.h
+END
+WPPTextField.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/wlpprmac/!svn/ver/76/Wlppr2/Wlppr2/View/Navbar/WPPTextField.m
+END
+WPPRefreshButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPRefreshButton.m
+END
+WPPSettingsButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/wlpprmac/!svn/ver/75/Wlppr2/Wlppr2/View/Navbar/WPPSettingsButton.m
+END

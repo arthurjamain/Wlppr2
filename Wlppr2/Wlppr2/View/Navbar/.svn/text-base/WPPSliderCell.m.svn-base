@@ -1,0 +1,110 @@
+//
+//  WPPSliderCell.m
+//  Wlppr2
+//
+//  Created by Arthur Jamain on 6/4/11.
+//  Copyright 2011 Serious Agency. All rights reserved.
+//
+
+#import "WPPSliderCell.h"
+
+
+@implementation WPPSliderCell
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Initialization code here.
+    }
+    
+    return self;
+}
+
+- (void)drawKnob:(NSRect)knobRect
+{
+    NSImage *knobImage;
+    
+    //Calcul de l'offset du knob afin de le placer au bon endroit en fonction de sa position dans le slider
+    CGFloat factor = [self doubleValue]/[self maxValue] * -8;
+    
+    if(isPressed)
+    {
+        knobImage = [[NSImage imageNamed:@"ZoomKnobActive"] autorelease];
+    }
+    else {
+        knobImage = [[NSImage imageNamed:@"ZoomKnob"] autorelease];
+    }
+    
+    NSImage *canvas = [[[NSImage alloc] initWithSize:knobRect.size] autorelease];
+	NSRect canvasRect = NSMakeRect(factor, 0, [canvas size].width, [canvas size].height);
+	    
+	// Draw fill onto Canvas
+	[canvas lockFocus];
+	[knobImage setSize:knobRect.size];
+	[knobImage compositeToPoint:NSMakePoint(0,3)
+							  operation:NSCompositeSourceOver];
+
+	[canvas unlockFocus];
+	
+	[[self controlView] lockFocus];
+	[canvas drawInRect:knobRect
+			  fromRect:canvasRect
+			 operation:NSCompositeSourceOver
+			  fraction:1.0];
+    
+	[[self controlView] unlockFocus];
+    
+}
+
+- (void)drawBarInside:(NSRect)aRect flipped:(BOOL)flipped
+{
+    [self setKnobThickness:0];
+    // Create a Canvas
+	NSImage *canvas = [[[NSImage alloc] initWithSize:aRect.size] autorelease];
+	NSRect canvasRect = NSMakeRect(0, -4, [canvas size].width, [canvas size].height);
+	NSImage *trackimg = [[NSImage imageNamed:@"Zoom"] autorelease];
+    
+	// Draw fill onto Canvas
+	[canvas lockFocus];
+	[trackimg compositeToPoint:NSMakePoint(0,2)
+                      operation:NSCompositeSourceOver];
+	[canvas unlockFocus];
+    
+    
+	// Draw canvas
+	[[self controlView] lockFocus];
+	[canvas drawInRect:aRect
+			  fromRect:canvasRect
+			 operation:NSCompositeSourceOver
+			  fraction:1.0];
+	[[self controlView] unlockFocus];
+}
+
+- (void) drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView*)controlView {
+    cellFrame = [self drawingRectForBounds:cellFrame];
+    cellFrame.size.width -= 10;
+    [controlView lockFocus];
+    [self drawBarInside:cellFrame flipped:[controlView isFlipped]];
+    [self drawKnob];
+    [controlView unlockFocus];
+}
+
+- (BOOL)startTrackingAt:(NSPoint)startPoint inView:(NSView *)controlView
+{
+    isPressed = YES;
+    return [super startTrackingAt:startPoint inView:controlView];   
+}
+
+- (void)stopTracking:(NSPoint)lastPoint at:(NSPoint)stopPoint inView:(NSView *)controlView mouseIsUp:(BOOL)flag
+{
+    isPressed = NO;
+    [super stopTracking:(NSPoint)lastPoint at:(NSPoint)stopPoint inView:(NSView *)controlView mouseIsUp:(BOOL)flag];
+}
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
+@end

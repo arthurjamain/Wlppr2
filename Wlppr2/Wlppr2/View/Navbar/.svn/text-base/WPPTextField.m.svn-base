@@ -1,0 +1,62 @@
+//
+//  WPPTextField.m
+//  Wlppr2
+//
+//  Created by Arthur Jamain on 6/4/11.
+//  Copyright 2011 Serious Agency. All rights reserved.
+//
+
+#import "WPPTextField.h"
+
+
+@implementation WPPTextField
+
+@synthesize cancelButton;
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        // Initialization code here.
+        [self setDelegate:self];
+    }
+    
+    return self;   
+}
+
+- (IBAction)clearField:(id)sender
+{
+    [self setStringValue:@""];
+    [[self window] makeFirstResponder:nil];
+    [cancelButton setHidden:YES];
+}
+
+-(void)textDidChange:(NSNotification *)notification
+{
+    if([[self stringValue] length] != 0 && [cancelButton isHidden])
+        [cancelButton setHidden:NO];
+
+    [super textDidChange:notification];
+}
+
+-(void)keyUp:(NSEvent *)theEvent
+{
+    if([[self stringValue] length] == 0 && ![cancelButton isHidden])
+        [cancelButton setHidden:YES];
+    if([theEvent keyCode] == 53)
+        [self clearField:nil];
+}
+
+//Implémenté pour virer l'autocompletion
+- (NSArray *)control:(NSControl *)control textView:(NSTextView *)textView completions:(NSArray *)words forPartialWordRange:(NSRange)charRange indexOfSelectedItem:(NSInteger *)index
+{
+    return nil;
+}
+
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
+@end

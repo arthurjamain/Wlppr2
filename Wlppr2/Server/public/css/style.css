@@ -1,0 +1,107 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+	min-height: 100%;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+#WppMainWindow {
+
+}
+
+#WppBody {
+	background: #444 url(img/linen.jpg) repeat top left;
+	height: 100%;
+	overflow-y: auto;
+}
+
+#WppSideBar {
+	width: 198px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #fff;
+}
+
+.WppList {
+	width: 100%;
+}
+
+.WppListItem {
+	display: inline-block;
+	width: 260px;
+	margin: 15px;
+}
+
+.WppListItem .itemImg img {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+	height: 162px;
+	width: 260px;
+	-webkit-transition: box-shadow 0.3s;
+}
+
+.WppListItem.selected img {
+	box-shadow: 0 0 20px 5px rgba(30, 105, 222, 0.8);
+}
+
+.WppListItem .itemName {
+	padding-top: 5px;
+	font-family: 'Helvetica Neue';
+	font-weight: normal;
+	color: #fff;
+	width: 260px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 13px;
+}
